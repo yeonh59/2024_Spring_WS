@@ -11,7 +11,7 @@ public class HelloController {
     @GetMapping("/")
     public  String hello(Model model){
         HelloDto helloDto = HelloDto.builder().
-                name("최길동e")
+                name("최길동")
                 .build();
 
         model.addAttribute("data", helloDto);
