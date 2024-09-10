@@ -3,21 +3,21 @@ package inhatc.cse.yeonheeshop.item.entity;
 import jakarta.persistence.*;
 import lombok.*;
 
+
 @Entity
-@Setter
 @Getter
+@Setter
 @ToString
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
 public class Item {
 
-    @Id // primary key 설정
-    @GeneratedValue(strategy = GenerationType.IDENTITY) // 자동증가
-
-    private Long id;
-
-    @Column(length = 15, nullable = false) // 길이랑 NotNull 설정하기
+    @Id //기본키 설정
+    @GeneratedValue(strategy = GenerationType.IDENTITY) //autoincrement, 자동증가
+    @Column(name="item_id")
+    private long id;
+    @Column(nullable = false, length = 50)
     private String itemNm;
 
     private int price;
